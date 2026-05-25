@@ -125,8 +125,8 @@ small{
     <h1>Is vandaag<br><span class="big">JOUW</span> speciale dag?</h1>
 
     <p>
-        Een dag vol liefde, geluk en mooie momenten...<br>
-        Is deze dag echt voor <b>JOU?</b> 💙
+        style="font-size:22px; margin-top:20px; color:#ffe45c;">
+                  لبخندت قشنگ‌ترین هدیه‌ایه که زندگی بهم داده 💛 
     </p>
 
     <div class="buttons">
