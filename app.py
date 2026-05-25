@@ -120,7 +120,7 @@ small{
 }
 
 video{
-    width:700px;
+    width:400px;
     border-radius:25px;
     box-shadow:0 0 25px rgba(255,255,255,0.5);
 }
