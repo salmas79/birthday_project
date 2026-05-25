@@ -24,7 +24,7 @@ body{
 
 .confetti{
     position:absolute;
-    font-size:35px;
+    font-size:28px;
 }
 
 .c1{top:12%; left:18%;}
@@ -39,43 +39,47 @@ body{
 }
 
 .cake{
-    font-size:60px;
-    margin-bottom:20px;
+    font-size:45px;
+    margin-bottom:15px;
 }
 
 h1{
-    font-size:70px;
+    font-size:45px;
     margin:0;
-    text-shadow:4px 4px 12px #004080;
+    text-shadow:3px 3px 10px #004080;
 }
 
 .big{
     color:#ffe45c;
-    font-size:95px;
+    font-size:60px;
 }
 
 p{
-    font-size:28px;
+    font-size:18px;
     text-shadow:2px 2px 8px #004080;
 }
 
 .buttons{
     display:flex;
     justify-content:center;
-    gap:40px;
-    margin-top:50px;
+    gap:25px;
+    margin-top:35px;
 }
 
 button{
-    width:260px;
-    height:120px;
+    width:180px;
+    height:80px;
     border:none;
-    border-radius:20px;
-    font-size:38px;
+    border-radius:18px;
+    font-size:24px;
     font-weight:bold;
     color:white;
     cursor:pointer;
-    box-shadow:0 8px 0 rgba(0,0,0,0.25);
+    box-shadow:0 6px 0 rgba(0,0,0,0.25);
+}
+
+small{
+    font-size:14px;
 }
 
 #yes{
@@ -90,17 +94,18 @@ button{
     position:absolute;
 }
 
-#gif{
-    display:none;
-    margin-top:35px;
+.result{
+    text-align:center;
 }
 
-#gif h2{
-    font-size:35px;
+.result h1{
+    font-size:70px;
+    margin-bottom:25px;
 }
 
-img{
+.result img{
     border-radius:20px;
+    width:330px;
 }
 </style>
 </head>
@@ -119,17 +124,14 @@ img{
 
     <h1>Is vandaag<br><span class="big">JOUW</span> speciale dag?</h1>
 
-    <p>Een dag vol liefde, geluk en mooie momenten...<br>
-    Is deze dag echt voor <b>JOU?</b> 💙</p>
+    <p>
+        Een dag vol liefde, geluk en mooie momenten...<br>
+        Is deze dag echt voor <b>JOU?</b> 💙
+    </p>
 
     <div class="buttons">
         <button id="yes" onclick="showGif()">🤍 Ja!<br><small>Dat ben ik! 🎉</small></button>
         <button id="no" onmouseover="moveButton()">💔 Nee<br><small>Niet vandaag 😅</small></button>
-    </div>
-
-    <div id="gif">
-        <h2>Gefeliciteerd!!! 🎉🎂✨</h2>
-        <img src="https://media.giphy.com/media/feio2yIUMtdqWjRiaF/giphy.gif" width="320">
     </div>
 </div>
 
@@ -138,15 +140,20 @@ function moveButton(){
     let button = document.getElementById("no");
     button.classList.add("moving");
 
-    let x = Math.random() * (window.innerWidth - 280);
-    let y = Math.random() * (window.innerHeight - 140);
+    let x = Math.random() * (window.innerWidth - 220);
+    let y = Math.random() * (window.innerHeight - 100);
 
     button.style.left = x + "px";
     button.style.top = y + "px";
 }
 
 function showGif(){
-    document.getElementById("gif").style.display = "block";
+    document.querySelector(".container").innerHTML = `
+        <div class="result">
+            <h1>🎉🎂✨</h1>
+            <img src="https://media.giphy.com/media/feio2yIUMtdqWjRiaF/giphy.gif">
+        </div>
+    `;
 }
 </script>
 
