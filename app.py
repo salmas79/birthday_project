@@ -124,10 +124,9 @@ small{
 
     <h1>Is vandaag<br><span class="big">JOUW</span> speciale dag?</h1>
 
-    <p>
-        style="font-size:22px; margin-top:20px; color:#ffe45c;">
-                  لبخندت قشنگ‌ترین هدیه‌ایه که زندگی بهم داده 💛 
-    </p>
+    <p style="font-size:22px; margin-top:20px; color:#ffe45c;">
+    لبخندت قشنگ‌ترین هدیه‌ایه که زندگی بهم داده 💛
+</p>
 
     <div class="buttons">
         <button id="yes" onclick="showGif()">🤍 Ja!<br><small>Dat ben ik! 🎉</small></button>
