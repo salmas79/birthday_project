@@ -150,7 +150,7 @@ function showGif(){
     document.querySelector(".container").innerHTML = `
         <div class="result">
             <h1>🎉🎂✨</h1>
-            <img src="https://media.giphy.com/media/feio2yIUMtdqWjRiaF/giphy.gif">
+            <img src="https://imgur.com/a/WmsUkuk">
         </div>
     `;
 }
