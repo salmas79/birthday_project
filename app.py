@@ -8,16 +8,22 @@ def home():
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
+
 body{
     margin:0;
     height:100vh;
     font-family:Arial, sans-serif;
+
     background: radial-gradient(circle at top, #4fc3ff, #0077ff 45%, #004fc4);
+
     overflow:hidden;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
     color:white;
 }
@@ -59,6 +65,12 @@ p{
     text-shadow:2px 2px 8px #004080;
 }
 
+.farsi{
+    font-size:22px;
+    margin-top:20px;
+    color:#ffe45c;
+}
+
 .buttons{
     display:flex;
     justify-content:center;
@@ -69,12 +81,16 @@ p{
 button{
     width:180px;
     height:80px;
+
     border:none;
     border-radius:18px;
+
     font-size:24px;
     font-weight:bold;
+
     color:white;
     cursor:pointer;
+
     box-shadow:0 6px 0 rgba(0,0,0,0.25);
 }
 
@@ -103,11 +119,14 @@ small{
     margin-bottom:25px;
 }
 
-.result img{
-    border-radius:20px;
-    width:330px;
+video{
+    width:700px;
+    border-radius:25px;
+    box-shadow:0 0 25px rgba(255,255,255,0.5);
 }
+
 </style>
+
 </head>
 
 <body>
@@ -120,23 +139,42 @@ small{
 <div class="confetti c6">🎈</div>
 
 <div class="container">
+
     <div class="cake">🎂</div>
 
-    <h1>Is vandaag<br><span class="big">JOUW</span> speciale dag?</h1>
+    <h1>
+        Is vandaag<br>
+        <span class="big">JOUW</span> speciale dag?
+    </h1>
 
-    <p style="font-size:22px; margin-top:20px; color:#ffe45c;">
-    لبخندت قشنگ‌ترین هدیه‌ایه که زندگی بهم داده 💛
-</p>
+    <p class="farsi">
+        لبخندت قشنگ‌ترین هدیه‌ایه که زندگی بهم داده 💛
+    </p>
 
     <div class="buttons">
-        <button id="yes" onclick="showGif()">🤍 Ja!<br><small>Dat ben ik! 🎉</small></button>
-        <button id="no" onmouseover="moveButton()">💔 Nee<br><small>Niet vandaag 😅</small></button>
+
+        <button id="yes" onclick="showGif()">
+            🤍 Ja!
+            <br>
+            <small>Dat ben ik! 🎉</small>
+        </button>
+
+        <button id="no" onmouseover="moveButton()">
+            💔 Nee
+            <br>
+            <small>Niet vandaag 😅</small>
+        </button>
+
     </div>
+
 </div>
 
 <script>
+
 function moveButton(){
+
     let button = document.getElementById("no");
+
     button.classList.add("moving");
 
     let x = Math.random() * (window.innerWidth - 220);
@@ -147,13 +185,22 @@ function moveButton(){
 }
 
 function showGif(){
+
     document.querySelector(".container").innerHTML = `
+
         <div class="result">
+
             <h1>🎉🎂✨</h1>
-            <img src="https://imgur.com/a/WmsUkuk">
+
+            <video autoplay loop muted playsinline>
+                <source src="https://i.imgur.com/UMzgKUf.mp4" type="video/mp4">
+            </video>
+
         </div>
+
     `;
 }
+
 </script>
 
 </body>
